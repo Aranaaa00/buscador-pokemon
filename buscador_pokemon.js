@@ -105,14 +105,14 @@ function mostrarPokemons() {
             emergente.style.display = "flex";
         });
 
-        if (cantidadVisible >= pokemons_coincidentes.length) {
-            boton_verMas.style.display = "none";
-        } else {
-            boton_verMas.style.display = "flex";
-        }
-
         seccion.append(articulo);
     });
+
+    if (cantidadVisible >= pokemons_coincidentes.length) {
+        boton_verMas.style.display = "none";
+    } else {
+        boton_verMas.style.display = "flex";
+    }
 };
 
 input.addEventListener("input", debounce(buscarPokemons, 500));
