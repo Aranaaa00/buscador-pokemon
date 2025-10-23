@@ -46,7 +46,9 @@ input {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     align-items: center;
     justify-content: center;
 }
@@ -56,13 +58,14 @@ input {
     align-items: center; 
     justify-content: center;
     gap: 1.4%;
-    background-color: #a1d6f1;
+    background-color: #8fc9e8;
     color: #236fb1;
     font-weight: bold;
     text-transform: capitalize;
     box-shadow: 0 4px 15px rgba(35, 137, 174, 0.4);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 10px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     padding: 2.8%;
     max-width: 100%;
     width: 30%;
@@ -85,6 +88,19 @@ input {
     margin: 1.2% 0;
     padding: 0.4%;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+#info_pokemon p:hover {
+    transform: translateX(5px);
+    background: rgba(35, 111, 177, 0.9);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    cursor: default;
+}
+
+#info_pokemon img:hover {
+    transform: scale(1.05) rotate(2deg);
 }
 
 #ver_mas{
@@ -124,10 +140,58 @@ input {
     border-radius: 10%;
 }
 
-.tarjeta_pokemon p {
+.tarjeta_pokemon #nombre-pokemon {
     color: #236fb1;
     font-weight: bold;
 }
+
+span {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+span p {
+  padding: 4px 9px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  width: 35%;
+}
+
+#grito_pokemon {
+  position: absolute;
+  top: 34%;
+  right: 33%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0; 
+}
+
+#grito_pokemon img {
+  width: 35px;
+  height: 35px;
+}
+
+.tipo-steel {background: #60a1b8}
+.tipo-water {background: #2980ef;}
+.tipo-bug {background: #91a119;}
+.tipo-dragon {background: #5061e1;}
+.tipo-electric {background: #fac000;}
+.tipo-ghost {background: #704170;}
+.tipo-fire {background: #e62829;}
+.tipo-fairy {background: #ef71ef;}
+.tipo-ice {background: #3fd8ff;}
+.tipo-fighting {background: #ff8000;}
+.tipo-normal {background: #9fa19f;}
+.tipo-grass {background-color: #3fa129;}
+.tipo-psychic {background: #ef4179;}
+.tipo-rock {background: #afa981;}
+.tipo-dark {background: #50413f;}
+.tipo-ground {background: #915121;}
+.tipo-poison {background: #8f41cb;}
+.tipo-flying {background: #81b9ef;}
 
 @media (max-width: 700px) {
     #info_pokemon {
